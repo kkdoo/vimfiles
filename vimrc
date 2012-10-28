@@ -110,3 +110,10 @@ let g:syntastic_enable_signs=1
 " Bindings
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 nnoremap <Leader>b :BufExplorer<CR>
+
+" Russian
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
+highlight lCursor guifg=NONE guibg=Cyan
