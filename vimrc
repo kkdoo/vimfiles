@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-vividchalk'
 Bundle 'bufexplorer.zip'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
@@ -33,13 +34,24 @@ Bundle 'skalnik/vim-vroom'
 filetype plugin indent on
 
 syntax on
-set t_Co=256
-colorscheme molokai
-set guitablabel=%M%t
-set lines=59
-set columns=239
-set guifont=Menlo:h14
-set transparency=7
+
+if has("gui_running")
+  set t_Co=256
+  colorscheme molokai
+  set guitablabel=%M%t
+  set lines=59
+  set columns=239
+  set guifont=Menlo:h14
+  set transparency=7
+else
+  if $TERM == 'xterm'
+    set term=xterm-256color
+    colorscheme molokai
+  else
+    colorscheme vividchalk
+  endif
+endif
+
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
