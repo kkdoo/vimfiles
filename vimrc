@@ -30,6 +30,10 @@ Bundle 'mattn/gist-vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'jQuery'
 Bundle 'skalnik/vim-vroom'
+Bundle 'nono/vim-handlebars'
+Bundle 'AndrewRadev/vim-eco'
+Bundle 'slim-template/vim-slim'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -117,3 +121,5 @@ set iminsert=0
 set imsearch=0
 
 highlight lCursor guifg=NONE guibg=Cyan
+
+" Airline
